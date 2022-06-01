@@ -1,0 +1,23 @@
+import logo from './logo.svg';
+import './App.css';
+import { useState } from 'react';
+
+function App() {
+  const [counter, setCounter] = useState(0);
+
+  const handleClick = () => {
+    setCounter(counter + 1)
+  }
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <h1>Contador</h1>
+        <p>Para usar o contador aperte o botão abaixo</p>
+        <button type='button' onClick={handleClick}>Aumentar</button>
+        <h2>{counter}</h2>
+      </header>
+    </div>
+    )
+}
+export default App;
