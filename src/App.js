@@ -4,6 +4,7 @@ const Equipe = (props) => {
   return(
     <div>
       <Sobre nome={props.nome} cargo={props.cargo} idade={props.idade}/>
+      <Social fb={props.facebook} />
     </div>
   );
 }
@@ -19,12 +20,25 @@ const Sobre = (props) => {
   );
 }
 
+const Social = (props) => {
+  return(
+    <div>
+      <h1>Social Media</h1>
+      <a href={props.fb}>Facebook</a>
+      <a>Linkedin</a>
+      <a>Youtube</a>
+      <hr/>
+    </div>
+  )
+}
+
 function App() {
 
   return (
     <div>
       <h1>Conheça nossa equipe</h1>
-      <Equipe nome="Lucas" cargo="Programador" idade="19" />
+      <Equipe nome="Lucas" cargo="Programador" idade="19" facebook="https://www.google.com" />
+      <Equipe nome="Pedro" cargo="designer" idade="23" facebook="https://www.youtube.com"/>
     </div>
   );
 }
