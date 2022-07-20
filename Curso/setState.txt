@@ -20,12 +20,6 @@ class App extends Component{
     this.setState(state)
   }
 
-  back(){
-    let state = this.state
-    state.nome = 'Fabricio'
-    this.setState(state)
-  }
-
   aumentar(){
     let state = this.state
     state.contador += 1;
@@ -39,6 +33,12 @@ class App extends Component{
       alert("O numero nao passa de 0")
       return;
     }
+    this.setState(state)
+  }
+
+  back(){
+    let state = this.state
+    state.nome = 'Fabricio'
     this.setState(state)
   }
 
