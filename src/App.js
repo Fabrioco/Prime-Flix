@@ -29,6 +29,10 @@ class App extends Component{
   aumentar(){
     let state = this.state
     state.contador += 1;
+    if(state.contador > 15){
+      alert("parou de funcionar");
+      return;
+    }
     this.setState(state)
   }
 
