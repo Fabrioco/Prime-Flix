@@ -6,7 +6,7 @@ class App extends Component{
     super(props);
     this.state={
       teste:[
-        {id:1, personagem: 'Rakan', mskin:'Guardião estelar e Sabugueiro', pskin:'arcana'},
+        {id:1, personagem: 'Rakan', mskin:'Guardião estelar e Sabugueiro', pskin:'Arcana'},
         {id:2, personagem: 'Braum', mskin: 'Cidade do crime', pskin:'El tigre'},
         {id:3, personagem: 'Karma', mskin: 'Dragoa da tranqulidade', pskin:'Ordem de lótus'}
       ]
