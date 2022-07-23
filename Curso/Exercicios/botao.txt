@@ -1,4 +1,21 @@
 import React, { Component } from "react";
+import Botao from'./components/Botao'
+
+class App extends Component{
+
+  render(){
+    return(
+      <div>
+        <Botao />
+      </div>
+    )
+  }
+}
+
+export default App;
+
+
+import React, { Component } from "react";
 
 class Botao extends Component{
 
