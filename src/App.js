@@ -1,17 +1,14 @@
-import React, {Component}  from "react";
-import Index from "./components/Feed";
+import React, { Component } from "react";
+import Index from './components/Feed'
 
 class App extends Component{
-
   constructor(props){
     super(props);
-    this.state = {
-      teste: [
-        {id: 1, nome: 'Fabricio', idade: 19, cargo:'Programador'},
-        {id: 2, nome: 'Pedro', idade: 20, cargo:'Designer'},
-        {id: 3, nome: 'Matheus', idade: 24, cargo:'Contador'},
-        {id: 4, nome: 'Paulo', idade: 17, cargo:'Professor'},
-        {id: 5, nome: 'Fernanda', idade: 26, cargo:'Cientista'}
+    this.state={
+      teste:[
+        {id:1, personagem: 'Rakan', mskin:'Guardião estelar e Sabugueiro', pskin:'arcana'},
+        {id:2, personagem: 'Braum', mskin: 'Cidade do crime', pskin:'El tigre'},
+        {id:3, personagem: 'Karma', mskin: 'Dragoa da tranqulidade', pskin:'Ordem de lótus'}
       ]
     }
   }
@@ -20,8 +17,8 @@ class App extends Component{
       <div>
         {this.state.teste.map((item)=>{
           return(
-            <Index id={item.id} nome={item.nome} idade={item.idade} cargo={item.cargo} />          
-        )})}
+           <Index key={item.id} personagem={item.personagem} melhorskin={item.mskin} piorskin={item.pskin} />
+          )})}
       </div>
     )
   }

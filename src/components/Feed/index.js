@@ -1,14 +1,15 @@
 import React, {Component}  from "react";
 
-class index extends Component{
+class Index extends Component{
   render(){
     return(
-      <div id={this.props.id}>
-        <h1>{this.props.nome}</h1>
-        <p>Tem {this.props.idade} anos e trabalha de {this.props.cargo}</p>
+        <div key={this.props.id}>
+          <h2>Personagem: {this.props.personagem} </h2>
+          <h4>Melhor Skin: {this.props.melhorskin} </h4>
+          <h4>Pior Skin: {this.props.piorskin} </h4>
       </div>
     )
   }
 }
 
-export default index;
+export default Index;
