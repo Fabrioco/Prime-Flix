@@ -1,0 +1,54 @@
+import React, { Component } from "react";
+
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      email: 'email@email.com',
+      senha: '12345678',
+      sexo: ''
+    }
+    this.emailCadastrado = this.emailCadastrado.bind(this);
+    this.senhaCadastrada = this.senhaCadastrada.bind(this);
+    this.trocaSexo = this.trocaSexo.bind(this);
+  }
+
+  emailCadastrado(e){
+    let valorDigitado = e.target.value;
+    this.setState({email: valorDigitado})
+  }
+  senhaCadastrada(e){
+    let valorDigitado = e.target.value;
+    this.setState({senha: valorDigitado})
+  }
+  trocaSexo(e){
+    let valorDigitado = e.target.value;
+    this.setState({sexo: valorDigitado})
+  }
+
+  render(){
+    return(
+      <div>
+        <h2>Login</h2>
+        <label>
+          Email: 
+        </label>
+        <input type='email' name='email' value={this.state.email} onChange={this.emailCadastrado} />
+        <label>Senha:</label>
+        <input type='password' name='senha' value={this.state.senha} onChange={this.senhaCadastrada} />
+        <label>Sexo:</label>
+        <select name="sexo" value={this.state.sexo} onChange={this.trocaSexo}>
+          <option value="Masculino">Masculino</option>
+          <option value="Feminino">Feminino</option>
+        </select>
+
+        <h3>{this.state.email}</h3>
+        <h3>{this.state.senha}</h3>
+        <h3>{this.state.sexo}</h3>
+      </div>
+      
+    )
+  }
+}
+
+export default App;
