@@ -6,48 +6,59 @@ class App extends Component{
         this.state = {
             nome: '',
             email: '',
-            senha:'',
-            error:''
+            senha: '',
+            sexo: '',
+            error: ''
         }
         this.trocarNome = this.trocarNome.bind(this);
         this.trocarEmail = this.trocarEmail.bind(this);
         this.trocarSenha = this.trocarSenha.bind(this);
-        this.cadastrar = this.cadastrar.bind(this)
+        this.trocarSexo = this.trocarSexo.bind(this);
+        this.cadastrar = this.cadastrar.bind(this);
     }
     trocarNome(e){
-        let valorDigitado = e.target.value;
-        this.setState({nome: valorDigitado});
+        let valorDado = e.target.value;
+        this.setState({nome: valorDado})
     }
     trocarEmail(e){
-        let valorDigitado = e.target.value;
-        this.setState({email: valorDigitado});
+        let valorDado = e.target.value;
+        this.setState({email: valorDado})
     }
     trocarSenha(e){
-        let valorDigitado = e.target.value;
-        this.setState({senha: valorDigitado})
+        let valorDado = e.target.value;
+        this.setState({senha: valorDado})
+    }
+    trocarSexo(e){
+        let valorDado = e.target.value;
+        this.setState({sexo: valorDado})
     }
     cadastrar(e){
-        let {nome, email, senha} = this.state;
-        if(nome !== '' && email !== '' && senha !== ''){
-            alert(`Nome: ${nome} \nEmail: ${email} \nSenha ${senha}`)
+        let {nome, email, senha, sexo} = this.state
+        if(nome !== '' && email !== '' && senha !== '' && sexo !== ''){
+            alert(`Nome: ${nome} \nEmail: ${email} \nSenha ${senha} \nSexo: ${sexo}`)
         }else{
-            this.setState({error: 'Vá com calma amigo esta faltando algo'})
+            this.setState({error:"Ops, ainda falta dados, por favor preencha todos corretamente."})
         }
         e.preventDefault();
     }
-
     render(){
         return(
             <div>
-                <h1>Novo usuário</h1>
+                <h1>Novo usuario</h1>
                 {this.state.error && <p>{this.state.error}</p>}
                 <form onSubmit={this.cadastrar}>
                     <label>Nome:</label> <br/>
-                    <input type='text' value={this.state.nome} onChange={this.trocarNome} /> <br/>
+                    <input type="text" value={this.state.nome} onChange={this.trocarNome} /> <br/>
                     <label>Email:</label> <br/>
                     <input type='email' value={this.state.email} onChange={this.trocarEmail} /> <br/>
                     <label>Senha:</label> <br/>
-                    <input type='password' value={this.state.Senha} onChange={this.trocarSenha} /> <br/>
+                    <input type='password' value={this.state.senha} onChange={this.trocarSenha} /> <br/>
+                    <label>Sexo:</label> <br/>
+                    <select name='sexo' onChange={this.trocarSexo} >
+                        <option></option>
+                        <option value='masculino' >Masculino</option>
+                        <option value='feminino' >Feminino</option>
+                    </select> <br/> <br/>
                     <button type="submit">Enviar</button>
                 </form>
             </div>
