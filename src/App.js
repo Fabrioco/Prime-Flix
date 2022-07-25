@@ -31,6 +31,7 @@ class App extends Component{
         <input type='password' name='senha' value={this.state.form.senha} onChange={this.dadosForm} />
         <label>Sexo:</label>
         <select name="sexo" value={this.state.form.sexo} onChange={this.dadosForm}>
+          <option></option>
           <option value="Masculino">Masculino</option>
           <option value="Feminino">Feminino</option>
         </select>
