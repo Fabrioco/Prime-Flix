@@ -2,23 +2,23 @@ import React, { useState } from "react";
 
 function App() {
 
-    const [compras, setCompras] = useState([
-        'Comprar uma mesa',
-        'Comprar uma cadeira'
+    const [tarefas, setTarefas] = useState([
+        'Pagar a conta de luz',
+        'Estudar React Hooks'
     ]);
-    
+
     const [input, setInput] = useState('')
 
     function handleAdd(){
-        setCompras([...compras, input]);
+        setTarefas([...tarefas, input])
         setInput('');
     }
 
     return(
         <div>
             <ul>
-                {compras.map(compra => (
-                    <li key={compra}>{compra}</li>
+                {tarefas.map(tarefa => (
+                    <li key={tarefa}>{tarefa}</li>
                 ))}
             </ul>
             <input type='text' value={input} onChange={e => setInput(e.target.value)} />
