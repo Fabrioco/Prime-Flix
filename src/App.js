@@ -1,28 +1,21 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-function App() {
+function App(){
+    const [nome, setNome] = useState('Fabricio')
 
-    const [compras, setCompras] = useState([
-        'Comprar uma mesa',
-        'Comprar uma cadeira'
-    ]);
-    
-    const [input, setInput] = useState('')
+    function Mudar(){
+        setNome("Pedro");
+    }
 
-    function handleAdd(){
-        setCompras([...compras, input]);
-        setInput('');
+    function Voltar(){
+        setNome('Fabricio');
     }
 
     return(
         <div>
-            <ul>
-                {compras.map(compra => (
-                    <li key={compra}>{compra}</li>
-                ))}
-            </ul>
-            <input type='text' value={input} onChange={e => setInput(e.target.value)} />
-            <button type="button" onClick={handleAdd} >Adicionar</button>
+            <h1>{nome}</h1>
+            <button type="button" onClick={Mudar} >Mudar</button>
+            <button type="button" onClick={Voltar} >Voltar</button>
         </div>
     )
 }
