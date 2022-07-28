@@ -10,9 +10,12 @@ function Home(){
             const response = await api.get("movie/now_playing", {
                 params:{
                     api_key: 'd990f125e042de6239b35dc9f8a09a89',
-                    language: 'pt-BR'
+                    language: 'pt-BR',
+                    page: '1'
                 }
             })
+
+            console.log(response.data.results)
         }
 
         loadFilmes();
