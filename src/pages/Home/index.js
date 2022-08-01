@@ -15,7 +15,8 @@ function Home(){
                 }
             })
 
-            console.log(response.data.results)
+            console.log(response.data.results
+                )
         }
 
         loadFilmes();
