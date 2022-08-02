@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react";
 import api from '../../services/api';
 import { Link } from 'react-router-dom';
-import './home.css'
+import './home.css';
 //URL da Api: https://api.themoviedb.org/3/movie/now_playing?api_key=d990f125e042de6239b35dc9f8a09a89&language=pt-BR
 
 function Home(){
@@ -19,7 +19,7 @@ function Home(){
             })
 
             //console.log(response.data.results.slice(0, 10))
-            setFilmes(response.data.results.slice(0, 10))
+            setFilmes(response.data.results.slice(0, 20))
             setLoading(false)
         }
 
