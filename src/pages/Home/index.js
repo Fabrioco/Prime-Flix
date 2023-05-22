@@ -5,6 +5,9 @@ import './home.css';
 //URL da Api: https://api.themoviedb.org/3/movie/now_playing?api_key=d990f125e042de6239b35dc9f8a09a89&language=pt-BR
 
 function Home(){
+
+    document.title = 'Prime Flix'
+
     const [filmes, setFilmes] = useState([])
     const [loading, setLoading] = useState(true)
 
