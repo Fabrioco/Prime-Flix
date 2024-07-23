@@ -9,7 +9,7 @@ Salvamento online: Filmes são salvos no local storage.
 
 
 
-Tecnologias Utilizadas:
+## Tecnologias Utilizadas:
 
 Frontend: ReactJS, JavaScript, CSS
 Roteamento: React Router DOM
